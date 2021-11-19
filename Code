@@ -1,0 +1,32 @@
+import java.util.Random;
+/**
+ *
+ * @author spyro
+ */
+public class JavaApplication13 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+    System.out.print(calcAverageScore(9));
+    }
+    
+    public static double calcAverageScore(int num) {
+        
+        Random rand = new Random(); 
+        double totalSum = 0;
+        double over40 = 0;
+        
+        for (double i =0; i<= num; i++) {
+            int randomNum = rand.nextInt(101);
+            if (randomNum >= 40) {
+                totalSum += randomNum;
+                over40++;
+            }
+        }
+        totalSum /= over40;
+        
+        return totalSum;
+        }
+}
